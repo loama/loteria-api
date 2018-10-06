@@ -10,6 +10,6 @@ const cors = require('cors')({
 exports.helloWorld = functions.https.onRequest((request, response) => {
   response.set('Access-Control-Allow-Origin', '*')
   cors(request, response, () => {
-    response.status(200).send({test: 'Hello'});
+    response.status(200).send({test: 'Hello World'});
   })
 });

@@ -1,0 +1,98 @@
+[debug] [2018-10-06T02:45:44.593Z] ----------------------------------------------------------------------
+[debug] [2018-10-06T02:45:44.596Z] Command:       /Users/jaime/.nvm/versions/node/v8.9.4/bin/node /Users/jaime/.nvm/versions/node/v8.9.4/bin/firebase deploy
+[debug] [2018-10-06T02:45:44.596Z] CLI Version:   3.17.4
+[debug] [2018-10-06T02:45:44.596Z] Platform:      darwin
+[debug] [2018-10-06T02:45:44.596Z] Node Version:  v8.9.4
+[debug] [2018-10-06T02:45:44.597Z] Time:          Fri Oct 05 2018 19:45:44 GMT-0700 (PDT)
+[debug] [2018-10-06T02:45:44.597Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-10-06T02:45:44.610Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-10-06T02:45:44.611Z] > authorizing via signed-in user
+[debug] [2018-10-06T02:45:44.612Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/loteria-api-3164c  
+  
+ Fri Oct 05 2018 19:45:44 GMT-0700 (PDT)
+[debug] [2018-10-06T02:45:45.251Z] <<< HTTP RESPONSE 200
+[debug] [2018-10-06T02:45:45.251Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/loteria-api-3164c/tokens  
+  
+ Fri Oct 05 2018 19:45:45 GMT-0700 (PDT)
+[debug] [2018-10-06T02:45:45.948Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'loteria-api-3164c'...
+[info] 
+[info] i  deploying firestore, functions, hosting
+[info] Running command: npm --prefix $RESOURCE_DIR run lint
+[info] ✔  functions: Finished running predeploy script.
+[info] i  firestore: checking firestore.rules for compilation errors...
+[debug] [2018-10-06T02:45:48.352Z] >>> HTTP REQUEST POST https://firebaserules.googleapis.com/v1/projects/loteria-api-3164c:test  
+ { source: { files: [ [Object] ] } } 
+ Fri Oct 05 2018 19:45:48 GMT-0700 (PDT)
+[debug] [2018-10-06T02:45:49.213Z] <<< HTTP RESPONSE 200
+[info] ✔  firestore: rules file firestore.rules compiled successfully
+[debug] [2018-10-06T02:45:49.214Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "./node_modules/.bin/eslint .",
+    "serve": "firebase serve --only functions",
+    "shell": "firebase experimental:functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "dependencies": {
+    "cors": "^2.8.4",
+    "firebase-admin": "^6.0.0",
+    "firebase-functions": "^2.0.5"
+  },
+  "devDependencies": {
+    "eslint": "^4.12.0",
+    "eslint-plugin-promise": "^3.6.0"
+  },
+  "private": true
+}
+[info] i  functions: ensuring necessary APIs are enabled...
+[debug] [2018-10-06T02:45:49.215Z] >>> HTTP REQUEST GET https://servicemanagement.googleapis.com/v1/services/cloudfunctions.googleapis.com/projectSettings/loteria-api-3164c?view=CONSUMER_VIEW  
+  
+ Fri Oct 05 2018 19:45:49 GMT-0700 (PDT)
+[debug] [2018-10-06T02:45:49.215Z] >>> HTTP REQUEST GET https://servicemanagement.googleapis.com/v1/services/runtimeconfig.googleapis.com/projectSettings/loteria-api-3164c?view=CONSUMER_VIEW  
+  
+ Fri Oct 05 2018 19:45:49 GMT-0700 (PDT)
+[debug] [2018-10-06T02:45:50.317Z] <<< HTTP RESPONSE 200
+[debug] [2018-10-06T02:45:50.341Z] <<< HTTP RESPONSE 200
+[info] ✔  functions: all necessary APIs are enabled
+[debug] [2018-10-06T02:45:50.343Z] >>> HTTP REQUEST GET https://appengine.googleapis.com/v1/apps/loteria-api-3164c  
+  
+ Fri Oct 05 2018 19:45:50 GMT-0700 (PDT)
+[debug] [2018-10-06T02:45:50.343Z] >>> HTTP REQUEST GET https://apikeys.googleapis.com/v1/projects/loteria-api-3164c/apiKeys  
+  
+ Fri Oct 05 2018 19:45:50 GMT-0700 (PDT)
+[debug] [2018-10-06T02:45:50.880Z] <<< HTTP RESPONSE 200
+[debug] [2018-10-06T02:45:50.882Z] <<< HTTP RESPONSE 200
+[info] i  firestore: uploading rules firestore.rules...
+[debug] [2018-10-06T02:45:50.886Z] >>> HTTP REQUEST POST https://firebaserules.googleapis.com/v1/projects/loteria-api-3164c/rulesets  
+ { source: { files: [ [Object] ] } } 
+ Fri Oct 05 2018 19:45:50 GMT-0700 (PDT)
+[debug] [2018-10-06T02:45:50.887Z] >>> HTTP REQUEST GET https://firestore.googleapis.com/v1beta1/projects/loteria-api-3164c/databases/(default)/indexes  
+  
+ Fri Oct 05 2018 19:45:50 GMT-0700 (PDT)
+[debug] [2018-10-06T02:45:51.332Z] <<< HTTP RESPONSE 200
+[debug] [2018-10-06T02:45:51.518Z] <<< HTTP RESPONSE 200
+[debug] [2018-10-06T02:45:51.518Z] [rules] created ruleset projects/loteria-api-3164c/rulesets/84a8f40e-c6fb-41c9-a46d-feb9461b518c
+[info] i  functions: preparing functions directory for uploading...
+[debug] [2018-10-06T02:45:51.519Z] >>> HTTP REQUEST GET https://runtimeconfig.googleapis.com/v1beta1/projects/loteria-api-3164c/configs  
+  
+ Fri Oct 05 2018 19:45:51 GMT-0700 (PDT)
+[debug] [2018-10-06T02:45:51.928Z] <<< HTTP RESPONSE 200
+[info] i  hosting: preparing dist directory for upload...
+[debug] [2018-10-06T02:45:52.139Z] >>> HTTP REQUEST PUT https://deploy.firebase.com/v1/hosting/loteria-api-3164c/uploads/-LO6G3qYsEi5dBlzw9v7?fileCount=1&message=  
+  
+ Fri Oct 05 2018 19:45:52 GMT-0700 (PDT)
+[debug] [2018-10-06T02:45:52.977Z] <<< HTTP RESPONSE 200
+[debug] [2018-10-06T02:45:52.977Z] [hosting] .tgz uploaded successfully, waiting for extraction
+[info] ✔  hosting: 1 files uploaded successfully
+[debug] [2018-10-06T02:45:53.399Z] [rules] releasing cloud.firestore with ruleset projects/loteria-api-3164c/rulesets/84a8f40e-c6fb-41c9-a46d-feb9461b518c
+[debug] [2018-10-06T02:45:53.400Z] >>> HTTP REQUEST PATCH https://firebaserules.googleapis.com/v1/projects/loteria-api-3164c/releases/cloud.firestore  
+ { release: 
+   { name: 'projects/loteria-api-3164c/releases/cloud.firestore',
+     rulesetName: 'projects/loteria-api-3164c/rulesets/84a8f40e-c6fb-41c9-a46d-feb9461b518c' } } 
+ Fri Oct 05 2018 19:45:53 GMT-0700 (PDT)
